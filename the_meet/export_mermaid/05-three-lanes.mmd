@@ -1,0 +1,34 @@
+---
+title: "Three experiences, one framework"
+config:
+  flowchart:
+    curve: step
+    wrappingWidth: 300
+---
+%% the_meet · 05 · Three lanes
+%% Source of truth: the_meet/generate.py (page5)
+%% Lanes are defined ANALYST → SEARCH → BOTS because mermaid places isolated
+%% subgraphs bottom-up under `flowchart LR`; the render then reads BOTS on top,
+%% matching the page.
+flowchart LR
+  subgraph L3["DATA ANALYST"]
+    direction LR
+    C1["<b>The analyst opens</b><br/>their own files"] --> C2["<b>AI-DESK profiles</b><br/>and drafts"] --> C3["<b>DATAHUB, if needed</b><br/>for a real table"] --> C4["<b>Rows return</b><br/>to the browser"] --> C5["<b>Charts and</b><br/>follow-ups"]
+  end
+
+  subgraph L2["ENTERPRISE SEARCH"]
+    direction LR
+    B1["<b>The client asks</b><br/>or searches"] --> B2["<b>AI-DESK writes</b><br/>and validates the query"] --> B3["<b>DATAHUB runs it</b><br/>and reflects rows"] --> B4["<b>AI-DESK infers</b><br/>insight, charts"] --> B5["<b>The client answers</b><br/>with evidence"]
+  end
+
+  subgraph L1["BOTS"]
+    direction LR
+    A1["<b>The client asks</b><br/>in plain English"] --> A2["<b>AI-DESK builds</b><br/>the query"] --> A3["<b>The client runs it</b><br/>directly on DATAHUB"] --> A4["<b>The client answers</b><br/>with its rows"]
+  end
+
+  LEGEND["<b>Every lane is the same three tiers:</b><br/>1 &nbsp; the client asks<br/>2 &nbsp; AI-DESK does the thinking<br/>3 &nbsp; DATAHUB touches the data<br/><br/>the answer returns to the client"]
+
+  classDef step fill:#FFFFFF,stroke:#BCC7D4,color:#111A24
+  classDef note fill:#F1F5F9,stroke:#BCC7D4,color:#111A24
+  class A1,A2,A3,A4,B1,B2,B3,B4,B5,C1,C2,C3,C4,C5 step
+  class LEGEND note

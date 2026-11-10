@@ -1,0 +1,52 @@
+---
+title: "What each experience gets from the framework"
+config:
+  flowchart:
+    curve: step
+---
+%% the_meet · 06 · Capability matrix
+%% Source of truth: the_meet/generate.py (page6)
+%% A grid is the point of this page, and mermaid's flowchart cannot align columns
+%% (subgraph `direction` is ignored for subgraphs of a flowchart), so this uses
+%% block-beta: one row per attribute, one column per experience.
+block-beta
+  columns 4
+  ttl["<b>What each experience gets from the framework</b> — capability comparison for scoping and selection"]:4
+  space h1["<b>BOTS</b>"] h2["<b>ENTERPRISE SEARCH</b>"] h3["<b>DATA ANALYST</b>"]
+
+  r1["<b>Runs as</b>"]
+  a1["Cloud Run — FastAPI, LangGraph"] b1["Cloud Run — FastAPI, LangGraph"] c1["the analyst's browser — TypeScript, React"]
+
+  r2["<b>Data it uses</b>"]
+  a2["warehouse tables, through a repository"] b2["warehouse tables and documents"] c2["the analyst's own files: CSV, XLSX, JSON"]
+
+  r3["<b>Who runs the query</b>"]
+  a3["the client's bot, directly on DATAHUB"] b3["AI-DESK, through DATAHUB"] c3["the browser's own engine (DuckDB)"]
+
+  r4["<b>Where the rows live</b>"]
+  a4["returned to the client, not cached"] b4["reflected back for inference"] c4["in the tab — rows never leave it"]
+
+  r5["<b>Documents</b>"]
+  a5["through the Unstructured service"] b5["contracts and BOL, in the same experience"] c5["not used"]
+
+  r6["<b>Reads from DATAHUB</b>"]
+  a6["schema, business context, hints"] b6["schema, business context, document corpus"] c6["repository catalogue and table metadata"]
+
+  r7["<b>Writes to DATAHUB</b>"]
+  a7["nothing — read-only"] b7["nothing — read-only"] c7["nothing — read-only"]
+
+  r8["<b>Model access</b>"]
+  a8["AI-DESK, shared"] b8["AI-DESK, shared"] c8["BYOK — the analyst's own key"]
+
+  foot["<b>One platform, one truth:</b> no experience owns a copy of the data, and every one of them reaches it through the same seam."]:4
+
+  classDef ttl fill:#FFFFFF,stroke:#FFFFFF,color:#111A24
+  classDef head fill:#E4EAF1,stroke:#AEBACA,color:#111A24
+  classDef label fill:#F1F5F9,stroke:#D3DBE5,color:#111A24
+  classDef cell fill:#FFFFFF,stroke:#D3DBE5,color:#3E4A58
+  classDef note fill:#F1F5F9,stroke:#BCC7D4,color:#111A24
+  class ttl ttl
+  class h1,h2,h3 head
+  class r1,r2,r3,r4,r5,r6,r7,r8 label
+  class a1,a2,a3,a4,a5,a6,a7,a8,b1,b2,b3,b4,b5,b6,b7,b8,c1,c2,c3,c4,c5,c6,c7,c8 cell
+  class foot note

@@ -1,0 +1,28 @@
+---
+title: "Data Analyst — in the analyst's own browser"
+config:
+  sequence:
+    mirrorActors: false
+    diagramMarginX: 20
+    diagramMarginY: 20
+---
+%% the_meet · 04 · Data Analyst
+%% Source of truth: generate.py (CONFIG["analyst"])
+%% The `box` matters: AI-DESK is shipped with the client, so the profiling, the
+%% SQL and the charts all happen in the analyst's browser. Nothing is sent out to
+%% AI-DESK — the only thing outside the box is DATAHUB, touched for a real table.
+sequenceDiagram
+    box rgb(241, 245, 249) CLIENT — the analyst's browser, where the work happens
+    participant C as the analyst · BYOK
+    participant A as AI-DESK<br/>shipped with the client
+    end
+    participant H as DATAHUB<br/>only when a real table is needed
+
+    C->>A: the question, in the tab
+    A->>A: 1 reads the file and profiles every column
+    A->>A: 2 drafts the SQL and runs it in the browser
+    A->>A: 3 renders charts and keeps the follow-ups
+    A->>A: rows never leave the tab — the model uses the analyst's own key
+    A->>H: only for a real table — catalogue and query execution
+    H-->>A: the rows
+    A-->>C: the answer, in the same conversation

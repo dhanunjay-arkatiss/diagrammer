@@ -1,0 +1,24 @@
+---
+title: "Enterprise Search — ask, look, infer"
+config:
+  sequence:
+    mirrorActors: false
+    diagramMarginX: 20
+    diagramMarginY: 20
+---
+%% the_meet · 03 · Enterprise Search
+%% Source of truth: generate.py (CONFIG["search"])
+%% Three lifelines: CLIENT, AI-DESK, DATAHUB.
+sequenceDiagram
+    participant C as CLIENT<br/>enterprise search<br/>structured · unstructured
+    participant A as AI-DESK
+    participant H as DATAHUB
+
+    C->>A: the question — one search box over the whole estate
+    A->>A: 1 finds the right repository and tables
+    A->>A: 2 writes the query
+    A->>A: 3 validates it before anything runs
+    A->>H: runs the query on the source
+    H-->>A: reflects the rows back
+    A->>A: reads the data reflected back and infers —<br/>analysis and charts before the client sees anything
+    A-->>C: insight, not just rows — with evidence

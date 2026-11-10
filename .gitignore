@@ -4,3 +4,4 @@ tmp/
 *.drawio.svg
 *.drawio.pdf
 aside/
+renders/

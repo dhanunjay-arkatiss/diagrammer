@@ -1,0 +1,46 @@
+---
+title: "One framework, three experiences"
+config:
+  flowchart:
+    curve: step
+    wrappingWidth: 720
+---
+%% the_meet · 01 · One framework, three experiences
+%% Source of truth: the_meet/generate.py (page1)
+%% Bands are single nodes on purpose: a subgraph that has edges leaving it cannot
+%% hold `direction`, and a tight single-node subgraph draws its label over the node.
+flowchart TD
+  subgraph CLIENTS["CLIENTS — every experience starts at the client"]
+    P1["<b>01 BOTS</b><br/>configured bots, embedded in your product<br/><i>uses the chatbot builder and sits within the app</i>"]
+    P2["<b>02 ENTERPRISE SEARCH</b><br/>ask the whole estate in plain English<br/><i>one question across tables and documents</i>"]
+    P3["<b>03 DATA ANALYST</b><br/>ad-hoc analysis, on the analyst's own terms<br/><i>BYOK · files and tables the analyst already has</i>"]
+  end
+
+  SEAM{{"<b>SEAMS</b> — the only way in:<br/>questions and answers, never your data"}}
+
+  AIDESK["<b>AI-DESK</b> — the GenAI framework we coined<br/>agentic AI · workflows · orchestration · analysis over structured and unstructured data<br/>plus the in-browser analysis path the Data Analyst uses<br/><br/><b>BOTS</b> — turns the question into a query in the bot's own configured environment · for configured bots<br/><b>ENTERPRISE SEARCH</b> — finds the data, queries it, then infers over what comes back · for the search experience<br/><b>UNSTRUCTURED</b> — chunks and embeds documents, then cites the page it answered from · for documents, whichever client asks<br/><br/><i>runs on Cloud Run · Cloud SQL for PostgreSQL + pgvector · Cloud Storage (GCS) · Gemini</i>"]
+
+  DATAHUB["<b>DATAHUB</b> — the system of record<br/>repository catalogue · source connections · query engine · document corpus · job queue"]
+
+  SOURCES["<b>attached sources</b> — Blob storage (GCS) · Structured RDBMS · Data warehouses<br/><i>the assistant never reaches them directly</i>"]
+
+  FOOT["<b>No long-running agents.</b> An ephemeral Cloud Run instance serves each request and dies with it — nothing is de-coupled from the service."]
+
+  P1 --> SEAM
+  P2 --> SEAM
+  P3 --> SEAM
+  SEAM --> AIDESK
+  AIDESK --> DATAHUB
+  DATAHUB -.-> SOURCES
+  DATAHUB -.- FOOT
+
+  classDef plain fill:#FFFFFF,stroke:#BCC7D4,color:#111A24
+  classDef band fill:#E4EAF1,stroke:#AEBACA,color:#111A24
+  classDef muted fill:#F1F5F9,stroke:#BCC7D4,color:#3E4A58
+  classDef note fill:#FFFFFF,stroke:#D3DBE5,color:#3E4A58,stroke-dasharray:4 3
+  classDef seam fill:#F1F5F9,stroke:#62707F,color:#111A24
+  class P1,P2,P3 plain
+  class AIDESK,DATAHUB band
+  class SOURCES muted
+  class FOOT note
+  class SEAM seam

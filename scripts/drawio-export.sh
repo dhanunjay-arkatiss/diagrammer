@@ -25,6 +25,7 @@ IMAGE=docker.io/rlespinasse/drawio-export:v4.60.0
 MAP=(-f "$FORMAT")
 [ -n "$SCALE" ]  && MAP+=(-s "$SCALE")
 [ -n "$BORDER" ] && MAP+=(-b "$BORDER")
+[ -n "$OUTDIR" ] && MAP+=(-o "$OUTDIR")
 [ ${#EXTRA[@]} -gt 0 ] && MAP+=("${EXTRA[@]}")
 
 # All inputs must live under one directory (mounted read/write at /data).

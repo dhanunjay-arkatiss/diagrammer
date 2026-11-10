@@ -1,0 +1,26 @@
+---
+title: "Bots — configured once, then it answers on its own"
+config:
+  sequence:
+    mirrorActors: false
+    diagramMarginX: 20
+    diagramMarginY: 20
+---
+%% the_meet · 02 · Bots
+%% Source of truth: generate.py (CONFIG["bots"])
+%% Three lifelines: the bot is the client, so there is no separate BOT actor.
+%% AI-DESK only builds the query and hands it back; the client executes it on
+%% DATAHUB directly, so execution never goes back through AI-DESK or the model.
+sequenceDiagram
+    participant C as CLIENT<br/>the configured bot<br/>Structured — from tables · Unstructured — from documents
+    participant A as AI-DESK
+    participant H as DATAHUB
+
+    C->>A: the question, in plain English
+    A->>A: 1 understands the question in plain English
+    A->>A: 2 knows which data this bot may touch
+    A->>A: 3 builds the query from the bot's own context
+    A-->>C: the query
+    C->>H: executes it directly on DATAHUB — not through AI-DESK
+    H-->>C: the rows, from the attached source
+    C->>C: the bot owns the answer — the model never executes
