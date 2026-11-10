@@ -1,0 +1,336 @@
+<mxfile host="app.diagrams.net" agent="pi" version="24.7.7">
+  <diagram id="a1" name="01 · One platform">
+    <mxGraphModel dx="1422" dy="798" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1280" pageHeight="720" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="t1" value="One platform, many assistants" style="text;html=1;fontSize=29;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="40" y="18" width="900" height="36" as="geometry"/>
+        </mxCell>
+        <mxCell id="t2" value="DataHub — the system of record for every data assistant" style="text;html=1;fontSize=15;fontColor=#666666;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="40" y="56" width="900" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="ub" value="Users — browsers, embedded copilots, API clients" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E9ECEE;strokeColor=#6A7481;fontSize=15;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="100" width="1140" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="us1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=open;endSize=6;strokeColor=#6A7481;exitX=0.25;exitY=1;entryX=0.5;entryY=0;;strokeWidth=2;;labelBackgroundColor=#FFFFFF" edge="1" parent="1" source="ub" target="s1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="us2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=open;endSize=6;strokeColor=#6A7481;exitX=0.5;exitY=1;entryX=0.5;entryY=0;;strokeWidth=2;;labelBackgroundColor=#FFFFFF" edge="1" parent="1" source="ub" target="s2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="us3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=open;endSize=6;strokeColor=#6A7481;exitX=0.72;exitY=1;entryX=0.5;entryY=0;;strokeWidth=2;;labelBackgroundColor=#FFFFFF" edge="1" parent="1" source="ub" target="s3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="us4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=open;endSize=6;strokeColor=#8A929C;exitX=0.9;exitY=1;entryX=0.5;entryY=0;;strokeWidth=2;;labelBackgroundColor=#FFFFFF" edge="1" parent="1" source="ub" target="s4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="s1" value="&lt;b&gt;Structured-data assistant&lt;/b&gt;&lt;br&gt;&lt;br&gt;Ask the data warehouse in plain English.&lt;br&gt;Guided onboarding, then agentic SQL&lt;br&gt;with charts.&lt;br&gt;&lt;small&gt;two services · one MCP server&lt;/small&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5B571;strokeColor=#B45718;fontSize=16;;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="70" y="210" width="260" height="166" as="geometry"/>
+        </mxCell>
+        <mxCell id="s2" value="&lt;b&gt;Document assistant&lt;/b&gt;&lt;br&gt;&lt;br&gt;Ask contracts and business documents.&lt;br&gt;Cited answers, with the page as evidence.&lt;br&gt;&lt;small&gt;an agent edge plus a compute layer&lt;/small&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#B3D591;strokeColor=#45742A;fontSize=16;;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="360" y="210" width="260" height="166" as="geometry"/>
+        </mxCell>
+        <mxCell id="s3" value="&lt;b&gt;File-analysis copilot&lt;/b&gt;&lt;br&gt;&lt;br&gt;Analyse tabular files without sending them.&lt;br&gt;The analysis runs in the user&amp;#39;s own browser.&lt;br&gt;&lt;small&gt;browser-native and embeddable&lt;/small&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#C7AED9;strokeColor=#5E3B87;fontSize=16;;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="650" y="210" width="260" height="166" as="geometry"/>
+        </mxCell>
+        <mxCell id="s4" value="&lt;b&gt;Next capability&lt;/b&gt;&lt;br&gt;&lt;br&gt;Onboard with&lt;br&gt;no new data store." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#6A7481;dashed=1;dashPattern=6 4;fontSize=16;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="940" y="210" width="260" height="166" as="geometry"/>
+        </mxCell>
+        <mxCell id="sh1" value="metadata · records · execute" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=12;strokeColor=#B45718;fontColor=#B45718;exitX=0.25;exitY=1;entryX=0.13;entryY=0;;strokeWidth=2;;labelBackgroundColor=#FFFFFF" edge="1" parent="1" source="s1" target="h1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="sh2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=13;strokeColor=#45742A;exitX=0.5;exitY=1;entryX=0.24;entryY=0;strokeWidth=2;" edge="1" parent="1" source="s2" target="h1"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="490" y="400"/><mxPoint x="344" y="400"/></Array></mxGeometry></mxCell><mxCell id="sh2_l" value="corpus · jobs · answers" style="edgeLabel;html=1;align=right;verticalAlign=middle;resizable=0;fontSize=13;fontColor=#2F5D2A;labelBackgroundColor=#FFFFFF;" vertex="1" connectable="0" parent="sh2"><mxGeometry x="-0.72" relative="1" as="geometry"/></mxCell>
+        <mxCell id="sh3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=12;strokeColor=#5E3B87;fontColor=#5E3B87;exitX=0.15;exitY=1;entryX=0.3;entryY=0;;strokeWidth=2;;labelBackgroundColor=#FFFFFF" edge="1" parent="1" source="s3" target="h1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="sh4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=12;dashed=1;dashPattern=6 4;strokeColor=#6A7481;fontColor=#6A7481;exitX=0.75;exitY=1;entryX=0.65;entryY=0;;strokeWidth=2;;labelBackgroundColor=#FFFFFF" edge="1" parent="1" source="s4" target="h1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="back3" value="rows → local tables" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=12;dashed=1;dashPattern=6 4;strokeColor=#5E3B87;fontColor=#5E3B87;exitX=0.78;exitY=0;entryX=0.92;entryY=1;;strokeWidth=2;;labelBackgroundColor=#FFFFFF" edge="1" parent="1" source="h1" target="s3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="959" y="420"/>
+              <mxPoint x="889" y="420"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="h1" value="DataHub — the system of record" style="swimlane;startSize=44;html=1;rounded=1;fontSize=20;fontStyle=1;fillColor=#B7CDEB;strokeColor=#2F5D8C;" vertex="1" parent="1">
+          <mxGeometry x="70" y="470" width="1140" height="150" as="geometry"/>
+        </mxCell>
+        <mxCell id="p1" value="Repository catalogue" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2F5D8C;fontSize=13;" vertex="1" parent="h1">
+          <mxGeometry x="30" y="54" width="170" height="52" as="geometry"/>
+        </mxCell>
+        <mxCell id="p2" value="Source connections" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2F5D8C;fontSize=13;" vertex="1" parent="h1">
+          <mxGeometry x="215" y="54" width="170" height="52" as="geometry"/>
+        </mxCell>
+        <mxCell id="p3" value="Query engine" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2F5D8C;fontSize=13;" vertex="1" parent="h1">
+          <mxGeometry x="400" y="54" width="170" height="52" as="geometry"/>
+        </mxCell>
+        <mxCell id="p4" value="Corpus &amp;amp; documents" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2F5D8C;fontSize=13;" vertex="1" parent="h1">
+          <mxGeometry x="585" y="54" width="170" height="52" as="geometry"/>
+        </mxCell>
+        <mxCell id="p5" value="Ingestion queue" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2F5D8C;fontSize=13;" vertex="1" parent="h1">
+          <mxGeometry x="770" y="54" width="170" height="52" as="geometry"/>
+        </mxCell>
+        <mxCell id="p6" value="Content plane" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2F5D8C;fontSize=13;" vertex="1" parent="h1">
+          <mxGeometry x="955" y="54" width="170" height="52" as="geometry"/>
+        </mxCell>
+              </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="a2" name="02 · Capability matrix">
+    <mxGraphModel dx="1422" dy="798" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1280" pageHeight="720" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="t1" value="What each assistant gets from the platform" style="text;html=1;fontSize=29;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="40" y="18" width="900" height="36" as="geometry"/>
+        </mxCell>
+        <mxCell id="t2" value="Capability comparison for selection &amp;amp; scoping — every assistant meets DataHub, never another assistant" style="text;html=1;fontSize=14;fontColor=#666666;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="40" y="56" width="1000" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="corner" value="" style="rounded=0;html=1;fillColor=#E9ECEE;strokeColor=#8A929C;" vertex="1" parent="1">
+          <mxGeometry x="60" y="110" width="240" height="48" as="geometry"/>
+        </mxCell>
+        <mxCell id="hd1" value="Structured-data assistant" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#F5B571;strokeColor=#B45718;fontSize=16;fontStyle=1;;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="310" y="110" width="300" height="48" as="geometry"/>
+        </mxCell>
+        <mxCell id="hd2" value="Document assistant" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#B3D591;strokeColor=#45742A;fontSize=16;fontStyle=1;;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="620" y="110" width="300" height="48" as="geometry"/>
+        </mxCell>
+        <mxCell id="hd3" value="File-analysis copilot" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#C7AED9;strokeColor=#5E3B87;fontSize=16;fontStyle=1;;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="930" y="110" width="290" height="48" as="geometry"/>
+        </mxCell>
+        <mxCell id="rl1" value="Runs as" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#E9ECEE;strokeColor=#8A929C;fontSize=13;fontStyle=1;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="60" y="158" width="240" height="76" as="geometry"/>
+        </mxCell>
+        <mxCell id="c11" value="Managed cloud · two FastAPI services + an MCP server" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#8A929C;fontSize=13;align=left;spacingLeft=8;spacingRight=8;" vertex="1" parent="1">
+          <mxGeometry x="310" y="158" width="300" height="76" as="geometry"/>
+        </mxCell>
+        <mxCell id="c12" value="Managed cloud · four runtimes (agent / ingest / retrieval)" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#8A929C;fontSize=13;align=left;spacingLeft=8;spacingRight=8;" vertex="1" parent="1">
+          <mxGeometry x="620" y="158" width="300" height="76" as="geometry"/>
+        </mxCell>
+        <mxCell id="c13" value="The user's browser tab (+ optional same-origin server)" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#8A929C;fontSize=13;align=left;spacingLeft=8;spacingRight=8;" vertex="1" parent="1">
+          <mxGeometry x="930" y="158" width="290" height="76" as="geometry"/>
+        </mxCell>
+        <mxCell id="rl2" value="Data it uses" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#E9ECEE;strokeColor=#8A929C;fontSize=13;fontStyle=1;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="60" y="234" width="240" height="76" as="geometry"/>
+        </mxCell>
+        <mxCell id="c21" value="Warehouse tables via a registered repository" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#8A929C;fontSize=13;align=left;spacingLeft=8;spacingRight=8;" vertex="1" parent="1">
+          <mxGeometry x="310" y="234" width="300" height="76" as="geometry"/>
+        </mxCell>
+        <mxCell id="c22" value="Contracts &amp;amp; business documents" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#8A929C;fontSize=13;align=left;spacingLeft=8;spacingRight=8;" vertex="1" parent="1">
+          <mxGeometry x="620" y="234" width="300" height="76" as="geometry"/>
+        </mxCell>
+        <mxCell id="c23" value="The user's own CSV / JSON / XLSX / MD / TXT files" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#8A929C;fontSize=13;align=left;spacingLeft=8;spacingRight=8;" vertex="1" parent="1">
+          <mxGeometry x="930" y="234" width="290" height="76" as="geometry"/>
+        </mxCell>
+        <mxCell id="rl3" value="Where the data lives" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#E9ECEE;strokeColor=#8A929C;fontSize=13;fontStyle=1;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="60" y="310" width="240" height="76" as="geometry"/>
+        </mxCell>
+        <mxCell id="c31" value="DataHub catalogue + the source databases" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#8A929C;fontSize=13;align=left;spacingLeft=8;spacingRight=8;" vertex="1" parent="1">
+          <mxGeometry x="310" y="310" width="300" height="76" as="geometry"/>
+        </mxCell>
+        <mxCell id="c32" value="DataHub only — the assistant's compute holds none" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#8A929C;fontSize=13;align=left;spacingLeft=8;spacingRight=8;" vertex="1" parent="1">
+          <mxGeometry x="620" y="310" width="300" height="76" as="geometry"/>
+        </mxCell>
+        <mxCell id="c33" value="Inside the tab — raw rows never leave it" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#8A929C;fontSize=13;align=left;spacingLeft=8;spacingRight=8;" vertex="1" parent="1">
+          <mxGeometry x="930" y="310" width="290" height="76" as="geometry"/>
+        </mxCell>
+        <mxCell id="rl4" value="Reads from DataHub" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#E9ECEE;strokeColor=#8A929C;fontSize=13;fontStyle=1;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="60" y="386" width="240" height="76" as="geometry"/>
+        </mxCell>
+        <mxCell id="c41" value="Table schemas (DDL), business criteria, column hints, catalogue" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#8A929C;fontSize=13;align=left;spacingLeft=8;spacingRight=8;" vertex="1" parent="1">
+          <mxGeometry x="310" y="386" width="300" height="76" as="geometry"/>
+        </mxCell>
+        <mxCell id="c42" value="Documents, chunks, entities, relations, search results, page content" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#8A929C;fontSize=13;align=left;spacingLeft=8;spacingRight=8;" vertex="1" parent="1">
+          <mxGeometry x="620" y="386" width="300" height="76" as="geometry"/>
+        </mxCell>
+        <mxCell id="c43" value="Repository catalogue + table metadata only" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#8A929C;fontSize=13;align=left;spacingLeft=8;spacingRight=8;" vertex="1" parent="1">
+          <mxGeometry x="930" y="386" width="290" height="76" as="geometry"/>
+        </mxCell>
+        <mxCell id="rl5" value="Writes to DataHub" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#E9ECEE;strokeColor=#8A929C;fontSize=13;fontStyle=1;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="60" y="462" width="240" height="76" as="geometry"/>
+        </mxCell>
+        <mxCell id="c51" value="Build records, column notes, business context" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#8A929C;fontSize=13;align=left;spacingLeft=8;spacingRight=8;" vertex="1" parent="1">
+          <mxGeometry x="310" y="462" width="300" height="76" as="geometry"/>
+        </mxCell>
+        <mxCell id="c52" value="Ingestion jobs, extracted nodes, entities, relations" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#8A929C;fontSize=13;align=left;spacingLeft=8;spacingRight=8;" vertex="1" parent="1">
+          <mxGeometry x="620" y="462" width="300" height="76" as="geometry"/>
+        </mxCell>
+        <mxCell id="c53" value="Nothing — read-only usage" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#8A929C;fontSize=13;align=left;spacingLeft=8;spacingRight=8;" vertex="1" parent="1">
+          <mxGeometry x="930" y="462" width="290" height="76" as="geometry"/>
+        </mxCell>
+        <mxCell id="rl6" value="Runs source SQL" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#E9ECEE;strokeColor=#8A929C;fontSize=13;fontStyle=1;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="60" y="538" width="240" height="76" as="geometry"/>
+        </mxCell>
+        <mxCell id="c61" value="Yes — generated, validated &amp;amp; auto-fixed, then executed by DataHub" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#8A929C;fontSize=13;align=left;spacingLeft=8;spacingRight=8;" vertex="1" parent="1">
+          <mxGeometry x="310" y="538" width="300" height="76" as="geometry"/>
+        </mxCell>
+        <mxCell id="c62" value="No — answers come from document evidence" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#8A929C;fontSize=13;align=left;spacingLeft=8;spacingRight=8;" vertex="1" parent="1">
+          <mxGeometry x="620" y="538" width="300" height="76" as="geometry"/>
+        </mxCell>
+        <mxCell id="c63" value="Yes — one generated query at a time, result rows capped" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#8A929C;fontSize=13;align=left;spacingLeft=8;spacingRight=8;" vertex="1" parent="1">
+          <mxGeometry x="930" y="538" width="290" height="76" as="geometry"/>
+        </mxCell>
+        <mxCell id="rl7" value="Conversation memory" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#E9ECEE;strokeColor=#8A929C;fontSize=13;fontStyle=1;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="60" y="614" width="240" height="76" as="geometry"/>
+        </mxCell>
+        <mxCell id="c71" value="Its own databases — sessions &amp;amp; history stay out of DataHub" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#8A929C;fontSize=13;align=left;spacingLeft=8;spacingRight=8;" vertex="1" parent="1">
+          <mxGeometry x="310" y="614" width="300" height="76" as="geometry"/>
+        </mxCell>
+        <mxCell id="c72" value="Its own durable session store — never in DataHub" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#8A929C;fontSize=13;align=left;spacingLeft=8;spacingRight=8;" vertex="1" parent="1">
+          <mxGeometry x="620" y="614" width="300" height="76" as="geometry"/>
+        </mxCell>
+        <mxCell id="c73" value="In the tab — workspace files + in-browser settings" style="rounded=0;html=1;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#8A929C;fontSize=13;align=left;spacingLeft=8;spacingRight=8;" vertex="1" parent="1">
+          <mxGeometry x="930" y="614" width="290" height="76" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="a3" name="03 · Who owns what">
+    <mxGraphModel dx="1422" dy="798" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1280" pageHeight="720" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="t1" value="Who owns what" style="text;html=1;fontSize=29;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="40" y="18" width="900" height="36" as="geometry"/>
+        </mxCell>
+        <mxCell id="t2" value="Division of responsibility between the platform of record and each capability on top of it" style="text;html=1;fontSize=14;fontColor=#666666;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="40" y="56" width="1000" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="cL" value="DataHub owns — the platform of record" style="swimlane;startSize=36;html=1;rounded=1;fontSize=16;fontStyle=1;fillColor=#B7CDEB;strokeColor=#2F5D8C;" vertex="1" parent="1">
+          <mxGeometry x="60" y="150" width="540" height="390" as="geometry"/>
+        </mxCell>
+        <mxCell id="ic1" value="•  The repository catalogue — repositories, datasets, tables, columns, descriptions, hints" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=10;fontSize=14;whiteSpace=wrap;" vertex="1" parent="cL">
+          <mxGeometry x="10" y="44" width="510" height="52" as="geometry"/>
+        </mxCell>
+        <mxCell id="ic2" value="•  Source connections &amp;amp; the query engine (Oracle · PostgreSQL · BigQuery)" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=10;fontSize=14;whiteSpace=wrap;" vertex="1" parent="cL">
+          <mxGeometry x="10" y="100" width="510" height="52" as="geometry"/>
+        </mxCell>
+        <mxCell id="ic3" value="•  The document corpus — documents, chunks, headers, entities, relations" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=10;fontSize=14;whiteSpace=wrap;" vertex="1" parent="cL">
+          <mxGeometry x="10" y="156" width="510" height="52" as="geometry"/>
+        </mxCell>
+        <mxCell id="ic4" value="•  The ingestion job queue — retries, backoff, dead-letters" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=10;fontSize=14;whiteSpace=wrap;" vertex="1" parent="cL">
+          <mxGeometry x="10" y="212" width="510" height="52" as="geometry"/>
+        </mxCell>
+        <mxCell id="ic5" value="•  The content plane — original bytes, page text, images, manifests" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=10;fontSize=14;whiteSpace=wrap;" vertex="1" parent="cL">
+          <mxGeometry x="10" y="268" width="510" height="52" as="geometry"/>
+        </mxCell>
+        <mxCell id="ic6" value="•  Build records &amp;amp; the business context of each repository" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=10;fontSize=14;whiteSpace=wrap;" vertex="1" parent="cL">
+          <mxGeometry x="10" y="324" width="510" height="52" as="geometry"/>
+        </mxCell>
+        <mxCell id="cR" value="Each assistant owns — the compute" style="swimlane;startSize=36;html=1;rounded=1;fontSize=16;fontStyle=1;fillColor=#E9ECEE;strokeColor=#6A7481;" vertex="1" parent="1">
+          <mxGeometry x="690" y="150" width="530" height="390" as="geometry"/>
+        </mxCell>
+        <mxCell id="ir1" value="•  The agent — prompts, tools, multi-step reasoning" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=10;fontSize=14;whiteSpace=wrap;" vertex="1" parent="cR">
+          <mxGeometry x="10" y="44" width="500" height="52" as="geometry"/>
+        </mxCell>
+        <mxCell id="ir2" value="•  Extraction, chunking, embeddings, OCR" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=10;fontSize=14;whiteSpace=wrap;" vertex="1" parent="cR">
+          <mxGeometry x="10" y="100" width="500" height="52" as="geometry"/>
+        </mxCell>
+        <mxCell id="ir3" value="•  Ranking, fusion and graph traversal" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=10;fontSize=14;whiteSpace=wrap;" vertex="1" parent="cR">
+          <mxGeometry x="10" y="156" width="500" height="52" as="geometry"/>
+        </mxCell>
+        <mxCell id="ir4" value="•  The user interface and entry points" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=10;fontSize=14;whiteSpace=wrap;" vertex="1" parent="cR">
+          <mxGeometry x="10" y="212" width="500" height="52" as="geometry"/>
+        </mxCell>
+        <mxCell id="ir5" value="•  Conversation memory — sessions never stored in DataHub" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=10;fontSize=14;whiteSpace=wrap;" vertex="1" parent="cR">
+          <mxGeometry x="10" y="268" width="500" height="52" as="geometry"/>
+        </mxCell>
+        <mxCell id="ir6" value="•  Their own testing, observability and delivery pipeline" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=10;fontSize=14;whiteSpace=wrap;" vertex="1" parent="cR">
+          <mxGeometry x="10" y="324" width="500" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="div" style="html=1;strokeColor=#666666;strokeWidth=2;endArrow=none;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="645" y="170" as="sourcePoint"/>
+            <mxPoint x="645" y="530" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="note" value="One platform · one truth — no assistant owns a copy of the data. A new capability is an integration, not a migration." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE59A;strokeColor=#A98218;fontSize=15;fontStyle=1;;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="140" y="620" width="1000" height="46" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="a4" name="04 · Footprint &amp; trust boundary">
+    <mxGraphModel dx="1422" dy="798" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1280" pageHeight="720" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="t1" value="Footprint &amp;amp; trust boundary" style="text;html=1;fontSize=27;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="60" y="16" width="800" height="34" as="geometry"/>
+        </mxCell>
+        <mxCell id="t2" value="Where things run — and the one line everything crosses" style="text;html=1;fontSize=14;fontColor=#666666;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="60" y="50" width="800" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="laneA" value="Users" style="swimlane;startSize=30;html=1;rounded=1;fillColor=#E9ECEE;strokeColor=#6A7481;fontSize=15;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="80" width="800" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="b1" value="Web UIs — consoles, embedded copilots" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#6A7481;fontSize=13;" vertex="1" parent="laneA">
+          <mxGeometry x="20" y="44" width="300" height="52" as="geometry"/>
+        </mxCell>
+        <mxCell id="b2" value="API clients" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#6A7481;fontSize=13;" vertex="1" parent="laneA">
+          <mxGeometry x="340" y="44" width="150" height="52" as="geometry"/>
+        </mxCell>
+        <mxCell id="b3" value="Embed hosts" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#6A7481;fontSize=13;" vertex="1" parent="laneA">
+          <mxGeometry x="510" y="44" width="170" height="52" as="geometry"/>
+        </mxCell>
+        <mxCell id="g1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=open;endSize=6;strokeColor=#6A7481;exitX=0.5;exitY=1;entryX=0.5;entryY=0;;strokeWidth=2;;labelBackgroundColor=#FFFFFF" edge="1" parent="1" source="laneA" target="laneB">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="laneB" value="Assistant services — managed cloud" style="swimlane;startSize=30;html=1;rounded=1;fillColor=#E9ECEE;strokeColor=#6A7481;fontSize=15;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="210" width="800" height="250" as="geometry"/>
+        </mxCell>
+        <mxCell id="v1" value="Structured-data assistant — two services" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5B571;strokeColor=#B45718;fontSize=12;;strokeWidth=2;" vertex="1" parent="laneB">
+          <mxGeometry x="20" y="60" width="148" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="v2" value="Document assistant — agent edge" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#B3D591;strokeColor=#45742A;fontSize=12;;strokeWidth=2;" vertex="1" parent="laneB">
+          <mxGeometry x="178" y="60" width="148" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="v3" value="Document assistant — ingest" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#B3D591;strokeColor=#45742A;fontSize=12;;strokeWidth=2;" vertex="1" parent="laneB">
+          <mxGeometry x="336" y="60" width="148" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="v4" value="Document assistant — retrieval" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#B3D591;strokeColor=#45742A;fontSize=12;;strokeWidth=2;" vertex="1" parent="laneB">
+          <mxGeometry x="494" y="60" width="148" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="v5" value="File-analysis copilot — proxy" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#C7AED9;strokeColor=#5E3B87;fontSize=12;;strokeWidth=2;" vertex="1" parent="laneB">
+          <mxGeometry x="652" y="60" width="128" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="vcap" value="Each assistant's own state (history / sessions / browser files) sits with the service — outside DataHub" style="text;html=1;align=left;verticalAlign=middle;fontSize=12;fontColor=#666666;" vertex="1" parent="laneB">
+          <mxGeometry x="20" y="176" width="750" height="36" as="geometry"/>
+        </mxCell>
+        <mxCell id="g2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;endSize=6;strokeColor=#6A7481;strokeWidth=2;exitX=0.955;exitY=1;entryX=0.955;entryY=0;" edge="1" parent="1" source="laneB" target="laneC"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="trust" value="single HTTPS boundary · short-lived identity headers · no credentials in the client" style="text;html=1;align=center;verticalAlign=middle;fontSize=14;fontStyle=1;fontColor=#A93226;" vertex="1" parent="1"><mxGeometry x="120" y="464" width="680" height="22" as="geometry"/></mxCell>
+        <mxCell id="laneC" value="DataHub platform" style="swimlane;startSize=30;html=1;rounded=1;fillColor=#E9ECEE;strokeColor=#2F5D8C;fontSize=15;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="500" width="800" height="180" as="geometry"/>
+        </mxCell>
+        <mxCell id="dh" value="DataHub — system of record" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#B7CDEB;strokeColor=#2F5D8C;fontSize=16;fontStyle=1;;strokeWidth=2;" vertex="1" parent="laneC">
+          <mxGeometry x="20" y="44" width="250" height="130" as="geometry"/>
+        </mxCell>
+        <mxCell id="dbx" value="managed database" style="shape=cylinder3;whiteSpace=wrap;html=1;fillColor=#FFE59A;strokeColor=#A98218;fontSize=13;;strokeWidth=2;" vertex="1" parent="laneC">
+          <mxGeometry x="300" y="44" width="160" height="130" as="geometry"/>
+        </mxCell>
+        <mxCell id="cont" value="content plane — original bytes &amp;amp; corpus artifacts" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2F5D8C;dashed=1;dashPattern=6 4;fontSize=13;" vertex="1" parent="laneC">
+          <mxGeometry x="490" y="44" width="290" height="130" as="geometry"/>
+        </mxCell>
+        <mxCell id="srcL" value="Customer source databases" style="swimlane;startSize=30;html=1;rounded=1;fillColor=#FFFFFF;strokeColor=#666666;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="890" y="210" width="330" height="470" as="geometry"/>
+        </mxCell>
+        <mxCell id="sd1" value="Oracle" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;fontSize=14;" vertex="1" parent="srcL">
+          <mxGeometry x="30" y="50" width="270" height="66" as="geometry"/>
+        </mxCell>
+        <mxCell id="sd2" value="PostgreSQL" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;fontSize=14;" vertex="1" parent="srcL">
+          <mxGeometry x="30" y="140" width="270" height="66" as="geometry"/>
+        </mxCell>
+        <mxCell id="sd3" value="Google BigQuery" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;fontSize=14;" vertex="1" parent="srcL">
+          <mxGeometry x="30" y="230" width="270" height="66" as="geometry"/>
+        </mxCell>
+        <mxCell id="srccap" value="attached via platform connections — never reachable by the assistants directly" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=10;fontSize=12;fontColor=#5A6472;whiteSpace=wrap;" vertex="1" parent="srcL"><mxGeometry x="30" y="330" width="270" height="70" as="geometry"/></mxCell>
+        <mxCell id="exe" value="executes approved queries" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=12;strokeColor=#2F5D8C;fontColor=#2F5D8C;exitX=1;exitY=0.66;entryX=0;entryY=0.66;endArrow=block;endFill=1;endSize=6;strokeWidth=2;labelBackgroundColor=#FFFFFF;align=right;" edge="1" parent="1" source="laneC" target="srcL"><mxGeometry x="0.4" relative="1" as="geometry"/></mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

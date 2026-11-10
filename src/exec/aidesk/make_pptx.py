@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""the_meet/make_pptx.py — turns the six exported pages into a presentation.
+"""out/exec/aidesk/aidesk-pack.pptx — the presentation, built from the exported pages.
 
 16:9 widescreen (13.333 x 7.5 in). A title slide, one full-bleed page per slide,
 a closing slide, and speaker notes throughout. Images are embedded at the export
@@ -8,6 +8,7 @@ or zoomed. Run after generate.py + drawio-export.sh.
 """
 
 import os
+from pathlib import Path
 from pptx import Presentation
 from pptx.util import Inches, Pt
 from pptx.dml.color import RGBColor
@@ -20,8 +21,10 @@ FAINT = RGBColor(0x65, 0x71, 0x7F)
 WHITE = RGBColor(0xFF, 0xFF, 0xFF)
 FONT = "Arial"
 
-EXPORT = "the_meet/export"
-OUT = "the_meet/aidesk-pack.pptx"
+ROOT = Path(__file__).resolve().parents[3]      # src/exec/aidesk -> repo root
+PACK = ROOT / "out" / "exec" / "aidesk"
+EXPORT = str(PACK / "export")
+OUT = str(PACK / "aidesk-pack.pptx")
 W, H = 13.333, 7.5
 
 SLIDES = [
@@ -103,19 +106,19 @@ def ink_rule(slide, x, y, w):
 
 SEQ = {
     "aidesk-pack-02-·-Bots.png": (
-        "the_meet/export_mermaid/hi/02-bots.png", "Bots — how a question travels",
+        str(PACK / "mermaid" / "hi" / "02-bots.png"), "Bots — how a question travels",
         ["A bot is configured once: what it answers, and which data it may touch.",
          "AI-Desk resolves the question into a query — the model never runs it.",
          "AI-Desk hands the query back; the bot executes it directly on DataHub.",
          "Rows return to the bot, and the bot owns the answer. Nothing is cached."]),
     "aidesk-pack-03-·-Enterprise-Search.png": (
-        "the_meet/export_mermaid/hi/03-enterprise-search.png", "Enterprise Search — behind the seam",
+        str(PACK / "mermaid" / "hi" / "03-enterprise-search.png"), "Enterprise Search — behind the seam",
         ["One question across the estate: warehouse tables and documents.",
          "AI-Desk finds the repository, writes the query, validates it.",
          "DataHub runs it on the source and reflects the rows back.",
          "The agent reasons over them, then the client sees insight and charts."]),
     "aidesk-pack-04-·-Data-Analyst.png": (
-        "the_meet/export_mermaid/hi/04-data-analyst.png", "Data Analyst — where the analysis happens",
+        str(PACK / "mermaid" / "hi" / "04-data-analyst.png"), "Data Analyst — where the analysis happens",
         ["BYOK: the analyst brings their own key and their own files.",
          "The file is profiled and the SQL drafted inside the browser.",
          "DataHub is the bridge, used only when a real table is needed.",
@@ -189,7 +192,7 @@ def build():
         "questions come in.")
 
     prs.save(OUT)
-    print("wrote %s — %d slides, %.1f MB" % (OUT, len(prs.slides),
+    print("wrote out/exec/aidesk/aidesk-pack.pptx — %d slides, %.1f MB" % (len(prs.slides),
                                              os.path.getsize(OUT) / 1048576))
 
 

@@ -1,7 +1,15 @@
+# out/ is committed on purpose — it is the shippable artifact set
+
+# tooling noise
 .pi/
 tmp/
+aside/
+renders/
 *.drawio.png
 *.drawio.svg
 *.drawio.pdf
-aside/
-renders/
+
+# build scratch
+out/.pages/
+__pycache__/
+*.pyc

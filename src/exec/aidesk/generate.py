@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""the_meet/aidesk-pack.drawio — six 16:9 pages about the AI-DESK framework.
+"""out/exec/aidesk/aidesk-pack.drawio — six 16:9 pages about the AI-DESK framework.
 
 Styling: monochrome navy/slate. One dark anchor band (AI-DESK), one light anchor
 band (DataHub), white cards. A single warm accent is used only for the takeaway
@@ -9,6 +9,10 @@ line, so nothing competes with the content.
 import html
 import os
 import xml.dom.minidom
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[3]      # src/exec/aidesk -> repo root
+OUTDIR = ROOT / "out" / "exec" / "aidesk"
 
 W, H = 1600, 900
 
@@ -424,7 +428,7 @@ out.append("</mxfile>\n")
 document = "".join(out)
 
 xml.dom.minidom.parseString(document)
-os.makedirs("the_meet", exist_ok=True)
-with open("the_meet/aidesk-pack.drawio", "w", encoding="utf-8") as fh:
+OUTDIR.mkdir(parents=True, exist_ok=True)
+with (OUTDIR / "aidesk-pack.drawio").open("w", encoding="utf-8") as fh:
     fh.write(document)
-print("written + XML valid: the_meet/aidesk-pack.drawio (6 pages)")
+print("written + XML valid: out/exec/aidesk/aidesk-pack.drawio (%d pages)" % len(PAGES))
