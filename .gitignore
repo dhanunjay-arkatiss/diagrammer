@@ -1,0 +1,6 @@
+.pi/
+tmp/
+*.drawio.png
+*.drawio.svg
+*.drawio.pdf
+aside/
